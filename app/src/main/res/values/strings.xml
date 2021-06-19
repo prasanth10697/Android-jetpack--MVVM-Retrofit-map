@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Interview</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="map">Map</string>
+    <string name="report">Report</string>
+    <string name="todo">TODO</string>
+    <string name="tn21bz0897">TN21BZ0897</string>
+    <string name="to_date">To Date :</string>
+    <string name="_15_06_2021">15-06-2021</string>
+    <string name="_08_06_2021">08-06-2021</string>
+    <string name="from_date">From Date :</string>
+    <string name="row_id">RowId</string>
+    <string name="vehicle_no">Vehicle No</string>
+    <string name="totalparkedtime">ParkedTime</string>
+    <string name="topspeed">TopSpeed</string>
+    <string name="totalrunningtime">RunningTime</string>
+    <string name="address">Address</string>
+</resources>
