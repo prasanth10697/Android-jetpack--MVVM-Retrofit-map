@@ -11,8 +11,9 @@
     <string name="_08_06_2021">08-06-2021</string>
     <string name="from_date">From Date :</string>
     <string name="row_id">RowId</string>
-    <string name="vehicle_no">Vehicle No</string>
+    <string name="vehicle_no">Vehicle Number</string>
     <string name="totalparkedtime">ParkedTime</string>
+    <string name="topspeedtime">TopSpeedTime</string>
     <string name="topspeed">TopSpeed</string>
     <string name="totalrunningtime">RunningTime</string>
     <string name="address">Address</string>

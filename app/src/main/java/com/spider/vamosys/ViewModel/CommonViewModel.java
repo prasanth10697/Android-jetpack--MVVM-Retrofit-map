@@ -29,9 +29,15 @@ public class CommonViewModel extends ViewModel {
     MutableLiveData<List<ReportModelList>> mutableLiveReportData = new MutableLiveData<>();
 
     public MutableLiveData<List<ProfileListModel>> getProfileList() {
+        if (mutableLiveProfileData == null) {
+            mutableLiveProfileData = new MutableLiveData<>();
+        }
         return mutableLiveProfileData;
     }
     public MutableLiveData<List<ReportModelList>> getReportList() {
+        if (mutableLiveReportData == null) {
+            mutableLiveReportData = new MutableLiveData<>();
+        }
         return mutableLiveReportData;
     }
 
@@ -62,7 +68,6 @@ public class CommonViewModel extends ViewModel {
         showRenewalReport.put("vehicleId", "TN21BZ0897-");
         showRenewalReport.put("toDate", "2021-06-15");
         showRenewalReport.put("userId", "OTTO");
-        Log.d("hit", "getFcReport: "+showRenewalReport);
 
         Call<CommomModel> call = reportApiService.getReportData(showRenewalReport);
         call.enqueue(new Callback<CommomModel>() {
@@ -72,7 +77,6 @@ public class CommonViewModel extends ViewModel {
                     mutableLivereportData.setValue(response.body().getData());
                     mutableLiveReportData.setValue(Objects.requireNonNull(mutableLivereportData.getValue()).getExcutiveData());
                 }
-                Log.d("hit", "onResponse: "+ Objects.requireNonNull(mutableLivereportData.getValue()).getExcutiveData());
             }
 
             @Override

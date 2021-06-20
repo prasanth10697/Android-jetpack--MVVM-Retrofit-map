@@ -95,7 +95,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="23dp"
+                                android:layout_marginStart="12dp"
                                 android:padding="10sp"
                                 android:text="@string/to_date"
                                 android:textColor="@color/balck_light" />
@@ -113,107 +113,115 @@
                 </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <androidx.constraintlayout.widget.ConstraintLayout
+            <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical">
+                <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <TableLayout
-                        android:id="@+id/workshop_main_edit"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="7sp"
-                        tools:ignore="MissingConstraints">
+                        android:layout_height="match_parent">
 
-                        <TableRow
+                        <TableLayout
+                            android:id="@+id/workshop_main_edit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:orientation="vertical"
+                            android:padding="7sp"
+                            tools:ignore="MissingConstraints">
 
-                            <LinearLayout
+                            <TableRow
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="3sp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
+                                android:layout_weight="1">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
+                                <LinearLayout
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:textStyle="bold"
-                                    android:text="@string/row_id"
-                                    android:layout_weight="1" />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/vehicle_no"
-                                    android:textStyle="bold"
-                                    android:layout_marginStart="4dp"
-                                    android:layout_weight="1" />
+                                    android:layout_marginStart="3sp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/totalparkedtime"
-                                    android:textStyle="bold"
-                                    android:layout_marginStart="4dp"
-                                    android:layout_weight="1" />
+                                    <TextView
+                                        android:id="@+id/rowid"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="bold"
+                                        android:text="@string/row_id"
+                                        android:layout_weight="1" />
+                                    <TextView
+                                        android:id="@+id/vehicleId"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/vehicle_no"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="7dp"
+                                        android:layout_weight="1" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/topspeed"
-                                    android:textStyle="bold"
-                                    android:layout_marginStart="4dp"
-                                    android:layout_weight="1" />
+                                    <TextView
+                                        android:id="@+id/topSpeed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/topspeed"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="7dp"
+                                        android:layout_weight="1" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/totalrunningtime"
-                                    android:textStyle="bold"
-                                    android:layout_marginStart="4dp"
-                                    android:layout_weight="1" />
+                                    <TextView
+                                        android:id="@+id/topSpeedtime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/topspeedtime"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="7dp"
+                                        android:layout_weight="1" />
 
 
-                            </LinearLayout>
-                        </TableRow>
 
-                    </TableLayout>
+                                    <TextView
+                                        android:id="@+id/totalParkedTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/totalparkedtime"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="7dp"
+                                        android:layout_weight="1" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                                    <TextView
+                                        android:id="@+id/totalRunningTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/totalrunningtime"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="7dp"
+                                        android:layout_weight="1" />
+                                    <TextView
+                                        android:id="@+id/address"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/address"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="7dp"
+                                        android:layout_weight="1" />
 
-            </HorizontalScrollView>
+
+
+                                </LinearLayout>
+                            </TableRow>
+
+                        </TableLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </HorizontalScrollView>
+
+            </ScrollView>
 
 
         </LinearLayout>
-        <ScrollView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:scrollbars="vertical">
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_post"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="1sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/switch_offline"
-                    tools:listitem="@layout/report_list_tableview" />
-
-            </HorizontalScrollView>
-        </ScrollView>
 
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
